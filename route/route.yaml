@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: mysqld
+spec:
+  to:
+    kind: Service
+    name: mysqld
+  port:
+    targetPort: 3306
